@@ -7,7 +7,7 @@ body {
 .flex-container {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 header {
@@ -29,35 +29,39 @@ header img {
 header h2 {
   font-family: Helvetica;
   font-size: 1rem;
+  text-align: left;
+
 }
 
 #sport {
   background-image: url(https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/moto.jpeg);
   height: 25rem;
+  background-size: cover;
 }
 
 .content {
-  display: flex;
+
   justify-content: flex-start;
   padding-left: 3rem;
   padding-top: 2rem;
   width: 20rem;
-  height: 5rem;
+  height: 9rem;
   background-color: black;
 }
 
 nav {
   text-align: center;
-  justify-content: center;
-  align-self: center;
+  flex-grow: 1;
   background-color: firebrick;
   height: 3.5rem;
 }
 
 nav span {
   display: inline-block;
-  justify-content: space-between;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
+
   .main {
   width: 960px;
   margin: 0 auto;
@@ -92,7 +96,8 @@ nav span {
 }
 
 .contents {
-  height: 2rem;
+  height: 15rem;
+  width: 30%;
   background-color: black;
 }
 
