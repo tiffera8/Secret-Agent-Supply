@@ -1,7 +1,8 @@
 body {
   font-family: Helvetica;
   font-size: 18px;
-  font-weight: bold;
+  margin: 0;
+  justify-content: center;
 }
 
 a {
@@ -11,19 +12,17 @@ a {
 
 .flex-container {
   display: flex;
-  justify-content: center;
   flex-wrap: nowrap;
+  align-items: center;
 }
 
 header {
   background-color: black;
-  align-self: flex-start;
   height: 2.32rem;
   position: relative;
   font-size: 1rem;
-  padding-top: 0.66rem;
-  padding-bottom: 0.66rem;
-  position: relative;
+  width: 100%;
+  align-self: center;
 }
 
 header img {
@@ -37,8 +36,11 @@ header img {
 header h2 {
   font-family: Helvetica;
   font-size: 1rem;
-  text-align: left;
-
+  color: white;
+  position: relative;
+  left: 11.5rem;
+  padding-top: 0.66rem;
+  padding-bottom: 0.66rem;
 }
 
 #sport {
@@ -46,18 +48,19 @@ header h2 {
   height: 25rem;
   background-size: cover;
   position: relative;
+  padding-top: 9rem;
+  padding-left: 8rem;
 }
 
 .content {
   position: absolute;
-  top: 9rem;
-  left: 8rem;
-  justify-content: flex-start;
   padding-left: 3rem;
   padding-top: 2rem;
   width: 20rem;
   height: 9rem;
   background-color: black;
+  color: white;
+  text-align: left;
 }
 
 nav {
@@ -141,6 +144,14 @@ nav span {
   padding-bottom: 1rem;
 }
 
+.number {
+  justify-content: flex-end;
+}
+
+.location {
+  justify-content: flex-start;
+}
+
 .location span .number span {
   display: block;
   text-align: center;
@@ -150,4 +161,5 @@ footer {
   text-align: left;
   height: 5rem;
   background-color: black;
+  background-size: cover;
 }
