@@ -47,20 +47,31 @@ header h2 {
   background-image: url(https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/moto.jpeg);
   height: 25rem;
   background-size: cover;
-  position: relative;
-  padding-top: 9rem;
-  padding-left: 8rem;
+
 }
 
 .content {
   position: absolute;
+  left: 8rem;
   padding-left: 3rem;
-  padding-top: 2rem;
   width: 20rem;
-  height: 9rem;
+  height:10rem;
   background-color: black;
   color: white;
   text-align: left;
+}
+
+.content h2 {
+  font-family: Helvetica;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.content h3 {
+  font-size: 1rem;
+  font-family: Helvetica;
+  padding-bottom: 0.25rem;
+  padding-top: 2rem;
 }
 
 nav {
