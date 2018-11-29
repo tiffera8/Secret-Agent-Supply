@@ -1,3 +1,5 @@
+/* universal info */
+
 body {
   font-family: Helvetica;
   font-size: 18px;
@@ -15,6 +17,8 @@ a {
   flex-wrap: nowrap;
   align-items: center;
 }
+
+/* header */
 
 header {
   background-color: black;
@@ -42,6 +46,8 @@ header h2 {
   padding-top: 0.66rem;
   padding-bottom: 0.66rem;
 }
+
+/* main banner section */
 
 #sport {
   background-image: url(https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/moto.jpeg);
@@ -73,6 +79,8 @@ header h2 {
   padding-top: 2rem;
 }
 
+/* navigation section */
+
 nav {
   text-align: center;
   flex-shrink: 1;
@@ -82,31 +90,34 @@ nav {
 
 nav span {
   display: inline-block;
-  padding: 0.75rem  3.5rem;;
+  padding: 0.75rem  4.175rem;;
   align-self: space-around;
 }
 
-  .main {
-  width: 960px;
+/* main container */
+
+.main {
   margin: 0 auto;
   width: 100%;
 }
 
-.flex-container items {
-  height: 15rem;
+/* Store section */
+
+ .flex-container items {
+  margin: 8rem 3rem;
+  height: 16rem;
   width: 960px;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  justify-content: center;
 }
 
 .item {
   border: 4px solid black;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  width: 20rem;
+  height: 16rem;
   margin-top: 3rem;
-  margin-left: 10px;
-  margin-right: 15px;
-  width: 30%;
-  align-content: center;
-  height: 15rem;
+  justify-content: center;
 }
 
 .item img {
@@ -118,32 +129,19 @@ nav span {
 .item span {
   display: block;
   text-align: center;
-}
-
-.contents {
-  height: 15rem;
-  width: 30%;
+  color: white;
   background-color: black;
+  height: 2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  align-self: center;
 }
 
-.contents span {
-  display: block;
-  justify-content: center;
-  text-align: center;
-}
 
-.flex-container locations {
-  justify-content: flex-start;
-  align-items: flex-start;
-  width: 960px;
-}
 
-.flex-container number {
-  justify-content: flex-end;
-  align-items: flex-end;
-  width: 960px;
-}
-.location .number{
+/* location/hours section */
+
+.location {
   background-color: black;
   height: 3rem;
   padding-left: 2rem;
@@ -154,22 +152,22 @@ nav span {
   padding-bottom: 1rem;
 }
 
-.number {
-  justify-content: flex-end;
-}
-
-.location {
-  justify-content: flex-start;
-}
-
-.location span .number span {
+.location span {
   display: block;
+  justify-content: center;
   text-align: center;
 }
 
+/* footer section */
+
 footer {
   text-align: left;
+  padding-left: 8rem;
   height: 5rem;
   background-color: black;
   background-size: cover;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin: 0 auto;
+  color: white;
 }
