@@ -4,7 +4,11 @@ html {
   box-sizing: border-box;
 }
 
-body {
+*, *:before, *:after {
+  box-sizing: inherit;
+
+}
+0body {
   font-family: Helvetica, sans-serif;
   line-height: 1.4;
 }
@@ -26,12 +30,12 @@ h1, h4 {
 
 /* header */
 
-header {
+.secret {
   background-color: black;
   color: white;
 }
 
-header img {
+.secret img {
   height: 1.5rem;
   padding-right: 1rem;
 }
@@ -119,37 +123,37 @@ nav ul {
   max-width: 8rem;
 }
 
-
+.contents {
+  display: block;
+  padding: 0.5rem;
+  background-color: black;
+  text-align: center;
+  color: white;
+}
 
 /* location/hours section */
 
-.location {
-  background-color: black;
-  height: 3rem;
-  padding-left: 2rem;
+.info {
   width: 35%;
-  margin-top: 3rem;
-  margin-bottom: 4rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
 }
 
-.location span {
+.info .numbers {
   display: block;
-  justify-content: center;
-  text-align: center;
-}
-
-/* footer section */
-
-footer {
-  text-align: left;
-  padding-left: 8rem;
-  height: 5rem;
+  padding: 1rem 2rem;
   background-color: black;
-  background-size: cover;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  margin: 0 auto;
   color: white;
 }
+
+@media only screen and (max-width: 1024px) { .item { width: 47%;} .item.glasses { display: none;}}
+
+@media only screen and (max-width: 470px) { .item, .location { flex-wrap: wrap;} .item { width: 90; margin: auto;} .item.watch { display: none;} .info { width: 90%; margin: 0.5rem auto;}}
+
+/* footer section */
+footer {
+  padding: 5rem 0;
+  margin-top: 4rem;
+  background-color: black;
+  color: white;
+}
+
+@media only screen and (max-width: 470px) { footer { text-align: center;}}
