@@ -1,6 +1,13 @@
+/* reset */
 
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
-/* Universal style */
+/* Universal Styles */
 
 html {
   font-size: 18px;
@@ -8,9 +15,11 @@ html {
 
 body {
   font-family: "Helvetica", sans-serif;
+  line-height: 1.4;
 }
 
-h1, h4 {
+h1,
+h4 {
   font-weight: bold;
 }
 
@@ -19,29 +28,28 @@ h1, h4 {
   margin: 0 auto;
 }
 
-/* header */
+/* Company Header */
 
 .header {
   background-color: black;
   color: white;
 }
 
-.header img {
-  height: 1.5rem;
-  padding-right: 1rem;
-  padding-left: 0.5rem;
-}
-
 .header .flex-container {
   display: flex;
   align-items: center;
-  padding: 0.66rem 0;
+  padding: .66rem 0 .66rem 0.5rem;
 }
 
-/* main banner */
+.header img {
+  height: 1.5rem;
+  padding-right: 1rem;
+}
+
+/* Main Banner section */
 
 .main-banner {
-  background-image: url("https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/moto.jpeg");
+  background: url("https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/moto.jpeg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -60,7 +68,30 @@ h1, h4 {
 .content h1 {
   margin: 0.25rem 0;
   font-size: 2rem;
+  line-height: 1.2;
 }
+
+@media only screen and (max-width: 470px) {
+  .main-banner {
+    height: 15rem;
+  }
+
+  .content {
+    width: 100%;
+    padding: 1rem 2rem;
+    top: 10rem;
+  }
+
+  .content h4 {
+    font-size: .77rem;
+  }
+
+  .content h1 {
+    font-size: 1rem;
+  }
+}
+
+/* Navigation section */
 
 nav {
   background-color: firebrick;
@@ -69,8 +100,8 @@ nav {
 
 nav ul {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 0.75rem 0;
 }
 
@@ -78,14 +109,28 @@ nav ul {
   display: none;
 }
 
-.item {
-  width: 30%;
+@media only screen and (max-width: 1024px) {
+  nav ul {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: block;
+    text-align: center;
+  }
 }
 
-.items .location {
+/* store section */
+
+.items,
+.location {
   display: flex;
   justify-content: space-between;
   margin-top: 3rem;
+}
+
+.item {
+  width: 30%;
 }
 
 .item-image {
@@ -105,8 +150,8 @@ nav ul {
   display: block;
   padding: 0.5rem;
   background-color: black;
-  color: white;
   text-align: center;
+  color: white;
 }
 
 .info {
@@ -120,20 +165,49 @@ nav ul {
   color: white;
 }
 
+@media only screen and (max-width: 1024px) {
+  .item {
+    width: 47%;
+  }
+
+  .item.sunglasses {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .items,
+  .location {
+    flex-wrap: wrap;
+  }
+
+  .item {
+    width: 90%;
+    margin: auto;
+  }
+
+  .item.watch {
+    display: none;
+  }
+
+  .info {
+    width: 90%;
+    margin: 0.5rem auto;
+  }
+}
+
+/* Footer */
+
 footer {
-  margin-top: 4rem;
   padding: 5rem 0;
+  margin-top: 4rem;
   background-color: black;
   color: white;
 }
 
-@media only screen and (max-width: 1024px) { nav ul { display:none;} .mobile-nav { display: block; text-align: center;
-}}
 
-@media only screen and (max-width: 470px) { .main-banner { height: 15rem;} .content { width: 100%; padding: 1rem 2rem; top: 10rem;} .content h4 { font-size: .77rem;} .content h1 { font-size: 1rem;}}
-
-@media only screen and (max-width: 1024px) { .item { width: 47%;} .item.sunglasses { display: none;}}
-
-@media only screen and (max-width: 470px) { .items, .location { flex-wrap: wrap;} .item { width: 90%; margin: auto;} .item.watch { display: none;} .info { width: 90%; margin: 0.5rem auto;}}
-
-@media only screen and (max-width: 470px) { footer { text-align: center;}}
+@media only screen and (max-width: 470px) {
+  footer {
+    text-align: center;
+  }
+}
