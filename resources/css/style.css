@@ -1,21 +1,16 @@
-/* reset info */
-html {
-  box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-
-}
-
-/* Universal Style */
+//* Universal style */
 
 html {
   font-size: 18px;
 }
+
 body {
   font-family: Helvetica, sans-serif;
   line-height: 1.4;
+}
+
+h1, h4 {
+  font-weight: bold;
 }
 
 .flex-container {
@@ -23,38 +18,33 @@ body {
   margin: 0 auto;
 }
 
-h1, h4 {
-  font-weight: bold;
-}
-
-
 /* header */
 
-.secret {
+.header {
   background-color: black;
   color: white;
 }
 
-.secret img {
+.header img {
   height: 1.5rem;
   padding-right: 1rem;
+  padding-left: 0.5rem;
 }
 
-.secret .flex-container {
+.header .flex-container {
   display: flex;
   align-items: center;
-  padding: 0.66rem 0 0.66rem 0.5rem;
+  padding: 0.66rem 0;
 }
 
-
-/* main banner section */
+/* main banner */
 
 .main-banner {
   background-image: url(https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/moto.jpeg);
-  height: 25rem;
-  background-size: cover;
-  background-repeat: no-repeat;
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 25rem;
 }
 
 .content {
@@ -67,16 +57,10 @@ h1, h4 {
 }
 
 .content h1 {
+  margin: 0.25rem 0;
   font-size: 2rem;
   line-height: 1.2;
-  margin: 0.25rem 0;
 }
-
-@media only screen and (max-width; 470px) { .main-banner {
-  height: 15rem; } .content { width: 100%; padding: 1rem 2rem; top: 10rem;} .content h4 { font-size: .77rem;} .content h1 { font-size: 1rem;}}
-
-
-  /* navigation section */
 
 nav {
   background-color: firebrick;
@@ -85,29 +69,23 @@ nav {
 
 nav ul {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 0.75rem  0;
+  align-items: center;
+  padding: 0.75rem 0;
 }
 
-.mobile-nav {
+mobile-nav {
   display: none;
 }
 
-@media only screen and (max-width: 1024px) { nav ul { display: none;} .mobile-nav { display: block; text-align: center;}}
+.item {
+  width: 30%;
+}
 
-
-/* Store section */
-
- .items .location {
+.items .location {
   display: flex;
   justify-content: space-between;
   margin-top: 3rem;
-}
-
-
-.item {
-  width: 30%
 }
 
 .item-image {
@@ -127,11 +105,9 @@ nav ul {
   display: block;
   padding: 0.5rem;
   background-color: black;
-  text-align: center;
   color: white;
+  text-align: center;
 }
-
-/* location/hours section */
 
 .info {
   width: 35%;
@@ -144,16 +120,9 @@ nav ul {
   color: white;
 }
 
-@media only screen and (max-width: 1024px) { .item { width: 47%;} .item.glasses { display: none;}}
-
-@media only screen and (max-width: 470px) { .item, .location { flex-wrap: wrap;} .item { width: 90; margin: auto;} .item.watch { display: none;} .info { width: 90%; margin: 0.5rem auto;}}
-
-/* footer section */
 footer {
-  padding: 5rem 0;
   margin-top: 4rem;
+  padding: 5rem 0;
   background-color: black;
   color: white;
 }
-
-@media only screen and (max-width: 470px) { footer { text-align: center;}}
