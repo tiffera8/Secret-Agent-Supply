@@ -1,12 +1,13 @@
-//* Universal style */
+
+
+/* Universal style */
 
 html {
   font-size: 18px;
 }
 
 body {
-  font-family: Helvetica, sans-serif;
-  line-height: 1.4;
+  font-family: "Helvetica", sans-serif;
 }
 
 h1, h4 {
@@ -40,9 +41,9 @@ h1, h4 {
 /* main banner */
 
 .main-banner {
-  background-image: url(https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/moto.jpeg);
-  background-position: center;
+  background-image: url("https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/moto.jpeg");
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
   height: 25rem;
 }
@@ -59,7 +60,6 @@ h1, h4 {
 .content h1 {
   margin: 0.25rem 0;
   font-size: 2rem;
-  line-height: 1.2;
 }
 
 nav {
@@ -74,7 +74,7 @@ nav ul {
   padding: 0.75rem 0;
 }
 
-mobile-nav {
+.mobile-nav {
   display: none;
 }
 
@@ -126,3 +126,14 @@ footer {
   background-color: black;
   color: white;
 }
+
+@media only screen and (max-width: 1024px) { nav ul { display:none;} .mobile-nav { display: block; text-align: center;
+}}
+
+@media only screen and (max-width: 470px) { .main-banner { height: 15rem;} .content { width: 100%; padding: 1rem 2rem; top: 10rem;} .content h4 { font-size: .77rem;} .content h1 { font-size: 1rem;}}
+
+@media only screen and (max-width: 1024px) { .item { width: 47%;} .item.sunglasses { display: none;}}
+
+@media only screen and (max-width: 470px) { .items, .location { flex-wrap: wrap;} .item { width: 90%; margin: auto;} .item.watch { display: none;} .info { width: 90%; margin: 0.5rem auto;}}
+
+@media only screen and (max-width: 470px) { footer { text-align: center;}}
